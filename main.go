@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
+
 	router := src.Router()
-	log.Fatal(http.ListenAndServe(":8080", router))
 	fmt.Println("Server has been running at http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", router))
 }

@@ -2,6 +2,7 @@ package src
 
 import (
 	"encoding/json"
+	"fmt"
 	"strconv"
 
 	"net/http"
@@ -9,6 +10,10 @@ import (
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
 )
+
+func Home(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "API Service Ready 👌")
+}
 
 type badRes struct {
 	Status  bool   `json:"status"`
